@@ -1,0 +1,62 @@
+# Database Schema
+## users
+| Column name         | Data type      | Details                  |
+|     :---:           |     :---:      |     :---:                |
+| id                  | integer        | not null, primary keys   |
+| username            | string         | not null, indexed        |
+| phone_number        | string         | not null, indexed, unique|
+| bio                 | string         |                          |
+|   password_digest   | string         | not null                 |
+|  session_token      | string         |not null, indexed, unique |
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
+
+## posts
+| Column name         | Data type      | Details                       |
+|     :---:           |     :---:      |     :---:                     |
+| id                  | integer        | not null, primary keys        |
+| body                | string         | not null                      |
+| poster_id           | integer        | not null, indexed, foreign key|
+| location_url        | string         |                               |
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
+
+
+## comments
+| Column name         | Data type      | Details                       |
+|     :---:           |     :---:      |     :---:                     |
+| id                  | integer        | not null, primary keys        |
+| body                | string         | not null                      |
+|  commentable_type   | string         | not null, options => ["comments","posts"]|
+|  commentable_id     | integer        | not null, indexed, foreign key|
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
+
+## friends
+| Column name         | Data type      | Details                       |
+|     :---:           |     :---:      |     :---:                     |
+| id                  | integer        | not null, primary keys        |
+| requester_user_id   | integer        | not null, indexed, foreign key|
+| requested_user_id   | integer        | not null, indexed, foreign key|
+| status              | string         | not null                      |
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
+
+## likes
+| Column name         | Data type      | Details                       |
+|     :---:           |     :---:      |     :---:                     |
+| id                  | integer        | not null, primary keys        |
+| likeable_type       |  string        | not null, options => ["comments","posts"]|
+| likeable_id         | integer        | not null, indexed, foreign key|
+| liker_id            | integer        | not null, indexed, foreign key|
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
+
+## photos
+| Column name         | Data type      | Details                       |
+|     :---:           |     :---:      |     :---:                     |
+| id                  | integer        | not null, primary keys        |
+| photoable_type      |  string        | not null, options => ["users","posts"]|
+| photoable_id        | integer        | not null, indexed, foreign key|
+|  created_at         | datetime       | not null                 |
+|  updated_at         | datetime       | not null                 |
