@@ -5,7 +5,12 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+node_modules/
+bundle.js
+bundle.js.map
+.byebug_history
+.DS_Store
+npm-debug.log 
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -25,3 +30,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+

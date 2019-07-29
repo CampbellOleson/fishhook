@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+collin = User.create(fname:"Collin",lname:"Leishman",email:"cl@email.com",bio:"bows baby",password:"password")
+tuscan = User.create(fname:"Tuscan",lname:"Crandall",email:"tc@email.com",bio:"yellowstone cut baby",password:"password")
+isaac = User.create(fname:"Isaac",lname:"Cox",email:"ic@email.com",bio:"brooke trout baby",password:"password")
+noah =  User.create(fname:"Noah",lname:"Rowley",email:"nr@email.com",password:"password")
+annabelle = User.create(fname:"Annabelle",lname:"McCrary",email:"adc@email.com",password:"password")
+dayna =  User.create(fname:"Dayna",lname:"Nyguen",email:"dn@email.com",password:"password")
+brooklyn = User.create(fname:"Brooklyn",lname:"Hoopes",email:"bh@email.com",password:"password")
+juanchi = User.create(fname:"Juan",lname:"Cebrio",email:"jc@email.com",bio:"I dont fish",password:"password")
+hyrum = User.create(fname:"Hyrum",lname:"Crane",email:"hc@email.com",bio:"I dont fish",password:"password")
+zach = User.create(fname:"Zach",lname:"Moise",email:"zm@email.com",password:"password")
+lucas = User.create(fname:"Lucas",lname:"Macias",email:"lm@email.com",bio:"I dont fish",password:"password")
+gracie = User.create(fname:"Gracie",lname:"Garso",email:"gg@email.com",password:"password")
+maddie = User.create(fname:"Maddie",lname:"Bernasek",email:"mb@email.com",bio:"I dont fish",password:"password")
+lauren = User.create(fname:"Lauren",lname:"Parris",email:"lp@email.com",password:"password")
+
