@@ -1,0 +1,51 @@
+.loggedout_nav_bar {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  background-color: green;
+}
+
+.loggedout_nav_bar p {
+  font-weight: 700;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.loggedout_nav_bar label {
+  color: whitesmoke;
+}
+
+.create_account_ul {
+  list-style: none;
+  width: inherit;
+}
+
+.create_account_ul li {
+  font-size: 20px;
+  font-weight: 700;
+  width: inherit;
+}
+
+.create_account_ul li input {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.create_account_names_li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create_account_names_li span {
+  width: 50%;
+}
+
+.create_account_names_li input {
+  width: 100%;
+}
+
+.create_account_outer_div {
+  width: 400px;
+  // display: flex;
+  // justify-content: flex-end;
+}

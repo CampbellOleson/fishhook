@@ -52,8 +52,6 @@ class Api::UsersController < ApplicationController
 
 end
 
-
-
 # AJAX tests
 # new_user = {fname: "test", lname: "user", email: "testing@123.com", password: "password", bio: "testy"}
 # show: $.ajax({method:"GET", url: "api/users/1"}) -- works 7/29
