@@ -1,4 +1,3 @@
-import SplashPage from "./session/splash_page";
 import React from "react";
 import { HomeRoute } from "../util/route_util";
 
