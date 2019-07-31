@@ -1,0 +1,46 @@
+.logo {
+  height: 85px;
+  width: 240px;
+  margin-top: 13px;
+}
+
+#loggedout_nav_bar {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  background-color: darkcyan;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#login_button {
+  background-color: darkslategrey;
+  color: whitesmoke;
+  border-radius: 1.8px;
+  margin-left: 12px;
+  width: 55px;
+  height: 24px;
+  font-weight: 530;
+  font-size: 13px;
+  border: 1px solid whitesmoke;
+}
+
+#login_button:hover {
+  background-color: darkcyan;
+}
+
+.login_field > input {
+  height: 19px;
+  width: 150px;
+  margin-left: 18px;
+}
+
+.login_label > label {
+  color: whitesmoke;
+  font-weight: 490;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+#login_table {
+  margin-top: 20px;
+}

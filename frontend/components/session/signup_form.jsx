@@ -30,9 +30,10 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div id="create_account_outer_div">
-        <p id="create_account_text">Create a New Account</p>
-        <form onSubmit={this.handleSubmit}>
+      <div id="signup_form_outer_div">
+        <p id="signup_form_text">Create a New Account</p>
+        <p id="signup_form_subheader">It's quick and easy</p>
+        <form onSubmit={this.handleSubmit} id="signup_form">
           <div id="full_name_field" className="form_input_div">
             <div className="name_field">
               <input
@@ -55,7 +56,7 @@ class SignupForm extends React.Component {
           </div>
           <div className="full_field form_input_div">
             <input
-              type="text"
+              type="email"
               name="email"
               value={this.state.email}
               placeholder="Email"

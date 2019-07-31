@@ -28,26 +28,26 @@ class LoginForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <table>
+        <table id="login_table">
           <tbody>
             <tr>
-              <td>
+              <td className="login_label">
                 <label>Email</label>
               </td>
-              <td>
+              <td className="login_label">
                 <label>Password </label>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="login_field">
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
               </td>
-              <td>
+              <td className="login_field">
                 <input
                   type="password"
                   name="password"
@@ -56,7 +56,9 @@ class LoginForm extends React.Component {
                 />
               </td>
               <td>
-                <button type="submit">Log In</button>
+                <button id="login_button" type="submit">
+                  Log In
+                </button>
               </td>
             </tr>
           </tbody>
