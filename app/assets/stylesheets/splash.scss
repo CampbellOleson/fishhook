@@ -1,51 +1,97 @@
-.loggedout_nav_bar {
+.logo {
+  height: 75px;
+  width: 180px;
+  z-index: 1;
+}
+
+#loggedout_nav_bar {
   width: inherit;
   display: flex;
   justify-content: space-around;
-  background-color: green;
+  background-color: lightcoral;
+  padding: 15px;
 }
 
-.loggedout_nav_bar p {
-  font-weight: 700;
-  font-size: 25px;
+#loggedout_nav_bar label {
   color: whitesmoke;
+  font-weight: 600;
+  margin-left: 25px;
 }
 
-.loggedout_nav_bar label {
-  color: whitesmoke;
-}
-
-.create_account_ul {
-  list-style: none;
-  width: inherit;
-}
-
-.create_account_ul li {
-  font-size: 20px;
-  font-weight: 700;
-  width: inherit;
-}
-
-.create_account_ul li input {
+.splash_body {
   width: 100%;
-  border-radius: 3px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 600px;
 }
 
-.create_account_names_li {
+#create_account_outer_div {
+  width: 400px;
+  margin-right: 190px;
+  margin-top: 20px;
+}
+
+.name_field {
+  width: 46%;
+  border-radius: 4px;
+}
+
+.name_field > input {
+  width: 100%;
+  padding: 7px;
+}
+
+.full_field > input {
+  width: 100%;
+  padding: 7px;
+}
+
+.full_field input {
+  width: 100%;
+}
+
+input {
+  border-radius: 7px;
+}
+
+#full_name_field {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 17px;
 }
 
-.create_account_names_li span {
-  width: 50%;
+#create_account_text {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 16px;
+  color: grey;
 }
 
-.create_account_names_li input {
-  width: 100%;
+.form_input_div {
+  margin-top: 10px;
 }
 
-.create_account_outer_div {
-  width: 400px;
-  // display: flex;
-  // justify-content: flex-end;
+#sign_up_button {
+  width: 90px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 40px;
+  background-color: salmon;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.name_field input[type="text"] {
+  font-size: 20px;
+}
+
+.full_field input[type="text"] {
+  font-size: 17px;
+}
+
+.full_field input[type="password"] {
+  font-size: 17px;
 }

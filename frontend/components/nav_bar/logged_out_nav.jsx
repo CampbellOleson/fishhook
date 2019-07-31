@@ -3,8 +3,10 @@ import LoginFormContainer from "../session/login_container";
 
 const LoggedOutNav = props => {
   return (
-    <div className="loggedout_nav_bar">
-      <p id="logged_out_nav_bar_logo">FishBook</p>
+    <div id="loggedout_nav_bar">
+      <a href="/">
+        <img className="logo" src={window.fishbook_logo} />
+      </a>
       <LoginFormContainer />
     </div>
   );

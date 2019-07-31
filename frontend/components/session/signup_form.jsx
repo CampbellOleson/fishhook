@@ -30,51 +30,51 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="create_account_outer_div">
-        <ul className="create_account_ul">
-          <li>Create a New Account</li>
-          <form onSubmit={this.handleSubmit}>
-            <li className="create_account_names_li">
-              <span>
-                <input
-                  type="text"
-                  name="fname"
-                  value={this.state.fname}
-                  placeholder="First name"
-                  onChange={this.handleChange}
-                />
-              </span>
-              <span>
-                <input
-                  type="text"
-                  name="lname"
-                  value={this.state.lname}
-                  placeholder="Last name"
-                  onChange={this.handleChange}
-                />
-              </span>
-            </li>
-            <li>
+      <div id="create_account_outer_div">
+        <p id="create_account_text">Create a New Account</p>
+        <form onSubmit={this.handleSubmit}>
+          <div id="full_name_field" className="form_input_div">
+            <div className="name_field">
               <input
                 type="text"
-                name="email"
-                value={this.state.email}
-                placeholder="Email"
+                name="fname"
+                value={this.state.fname}
+                placeholder="First name"
                 onChange={this.handleChange}
               />
-            </li>
-            <li>
+            </div>
+            <div className="name_field">
               <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                placeholder="Password"
+                type="text"
+                name="lname"
+                value={this.state.lname}
+                placeholder="Last name"
                 onChange={this.handleChange}
               />
-            </li>
-            <button type="submit">Sign Up</button>
-          </form>
-        </ul>
+            </div>
+          </div>
+          <div className="full_field form_input_div">
+            <input
+              type="text"
+              name="email"
+              value={this.state.email}
+              placeholder="Email"
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="full_field form_input_div">
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              placeholder="Password"
+              onChange={this.handleChange}
+            />
+          </div>
+          <button type="submit" id="sign_up_button">
+            Sign Up
+          </button>
+        </form>
       </div>
     );
   }

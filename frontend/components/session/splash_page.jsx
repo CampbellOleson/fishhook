@@ -6,7 +6,9 @@ const SplashPage = () => {
   return (
     <div>
       <LoggedOutNav />
-      <SignupFormContainer />
+      <div className="splash_body">
+        <SignupFormContainer />
+      </div>
     </div>
   );
 };
