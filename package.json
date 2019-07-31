@@ -1,5 +1,5 @@
 {
-  "name": "FishBook",
+  "name": "fishhook",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.5.5",
