@@ -23,6 +23,8 @@ npm-debug.log
 !/storage/.keep
 
 /node_modules
+/bundle.js
+/bundle.js.map
 /yarn-error.log
 
 /public/assets
