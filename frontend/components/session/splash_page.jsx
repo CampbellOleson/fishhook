@@ -1,12 +1,14 @@
 import SignupFormContainer from "./signup_container";
-import LoggedOutNav from "../nav_bar/logged_out_nav";
+import LoggedOutNav from "../nav_bar/loggedout_nav";
 import React from "react";
 import Footer from "../footer";
+import FormErrorsContainer from "./errors/form_errors_container";
 
 const SplashPage = () => {
   return (
     <div>
       <LoggedOutNav />
+      <FormErrorsContainer />
       <div className="splash_background">
         <div className="splash_body">
           <div id="fishhook_blurb_container">

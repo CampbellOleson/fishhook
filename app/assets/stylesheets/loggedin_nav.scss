@@ -1,0 +1,42 @@
+#loggedin_nav_bar {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  background-color: darkcyan;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#logout_button {
+  background-color: darkslategrey;
+  color: whitesmoke;
+  border-radius: 1.8px;
+  margin-left: 12px;
+  width: 70px;
+  height: 24px;
+  margin-top: 40px;
+  font-weight: 530;
+  font-size: 13px;
+  border: 1px solid whitesmoke;
+}
+
+#temp_title {
+  font-size: 100px;
+  margin: 30px;
+}
+
+#temp_blurb {
+  font-size: 39px;
+  margin: 30px;
+}
+
+#temp_background {
+  height: 100%;
+  background-position: 0px 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: image-url("placeholder.jpeg");
+}
+
+#posts_index_content {
+  height: 2000px;
+}

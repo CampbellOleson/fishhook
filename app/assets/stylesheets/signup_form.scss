@@ -1,0 +1,87 @@
+#signup_form_outer_div {
+  width: 400px;
+  margin-right: 205px;
+  margin-top: 50px;
+}
+
+#signup_form_text {
+  font-weight: 550;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+}
+
+#signup_form_subheader {
+  font-size: 19px;
+  font-weight: 250;
+  margin-bottom: 25px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px black;
+}
+
+.name_field {
+  width: 46%;
+}
+
+.full_field {
+  margin-bottom: 10px;
+}
+
+.name_field > input {
+  width: 100%;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+.full_field > input {
+  width: 100%;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+.full_field input {
+  width: 100%;
+}
+
+#full_name_field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form_input_div {
+  margin-top: 10px;
+}
+
+#sign_up_button {
+  width: 180px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 50px;
+  background-color: green;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 23px;
+  border-radius: 8px;
+  text-shadow: 2px 2px 4px grey;
+  box-shadow: 3px 3px 6px grey;
+  border: 1px solid lightseagreen;
+}
+
+#sign_up_button:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+.name_field input[type="text"] {
+  font-size: 19px;
+}
+
+.full_field input[type="email"] {
+  font-size: 19px;
+}
+
+.full_field input[type="password"] {
+  font-size: 19px;
+}

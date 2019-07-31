@@ -1,0 +1,35 @@
+#form_errors_container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-top: 15px;
+  margin-right: 280px;
+  float: right;
+  border: 2px solid maroon;
+  box-shadow: 3px 3px 7px black;
+  position: relative;
+}
+
+#form_errors_container ul {
+  list-style: none;
+}
+
+// arrow pointing up
+
+// #form_errors_container:before {
+//   content: "";
+//   width: 18px;
+//   height: 18px;
+//   background: red;
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   transform: translateX(-50%) rotate(45deg);
+//   border-left: 2px solid maroon;
+//   border-top: 2px solid maroon;
+//   top: -12px;
+// }

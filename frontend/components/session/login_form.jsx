@@ -5,6 +5,7 @@ class LoginForm extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestUser = this.guestUser.bind(this);
     this.state = {
       email: "",
       password: ""
@@ -23,6 +24,12 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state); // should we clone state before passing it in?
+  }
+
+  guestUser(e) {
+    e.preventDefault();
+    const guest = { email: "guestuser@fishhook.com", password: "guestuser" };
+    this.props.login(guest);
   }
 
   render() {
@@ -63,6 +70,9 @@ class LoginForm extends React.Component {
             </tr>
           </tbody>
         </table>
+        <a id="guest_link" onClick={this.guestUser}>
+          No account? Continue as guest
+        </a>
       </form>
     );
   }

@@ -1,7 +1,7 @@
 .logo {
-  height: 85px;
-  width: 240px;
-  margin-top: 13px;
+  height: 90px;
+  width: 250px;
+  margin-top: 10px;
 }
 
 #loggedout_nav_bar {
@@ -26,6 +26,7 @@
 
 #login_button:hover {
   background-color: darkcyan;
+  cursor: pointer;
 }
 
 .login_field > input {
@@ -42,5 +43,20 @@
 }
 
 #login_table {
-  margin-top: 20px;
+  margin-top: 17px;
+}
+
+#guest_link {
+  font-size: 12px;
+  color: whitesmoke;
+  text-decoration: underline;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-right: 60px;
+}
+
+#guest_link:hover {
+  color: lightblue;
+  cursor: pointer;
 }
