@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/Root";
 import configureStore from "./store/store";
+import * as Util from "./util/api_friend_request_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   const preloadedState = window.currentUser
