@@ -1,13 +1,11 @@
 import { merge } from "lodash";
-import { LOGIN_CURRENT_USER } from "../actions/session_actions";
+import { LOGIN_CURRENT_USER } from "../../actions/session_actions";
+import { APPROVE_FRIEND_REQUEST } from "../../actions/friend_request_actions";
 import {
   RECEIVE_USER_DETAIL,
   RECEIVE_USERS,
   DELETE_USER
-} from "../actions/user_actions";
-
-// NOTE: the userReducer's job is to add user info to state -- add a case for any time we want to
-// add user info to state (either user detail or users index)
+} from "../../actions/user_actions";
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -18,6 +16,11 @@ const usersReducer = (state = {}, action) => {
       return merge({}, state, { [action.currentUser.id]: action.currentUser });
     case RECEIVE_USERS:
       return merge({}, state, action.users);
+    case APPROVE_FRIEND_REQUEST:
+      const currentUser = state[action.request.requested_id];
+      const newFriendId = action.request.requester_id;
+      currentUser.friend_ids.push(newFriendId);
+      return merge({}, state, { [currentUser.id]: currentUser });
     case DELETE_USER:
       const newState = Object.assign({}, state);
       delete newState[action.userId];

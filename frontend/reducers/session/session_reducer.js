@@ -1,8 +1,8 @@
 import {
   LOGIN_CURRENT_USER,
   LOGOUT_CURRENT_USER
-} from "../actions/session_actions";
-import { DELETE_USER } from "../actions/user_actions";
+} from "../../actions/session_actions";
+import { DELETE_USER } from "../../actions/user_actions";
 
 const _nullSession = {
   currentUserId: null

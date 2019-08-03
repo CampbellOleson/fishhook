@@ -1,18 +1,40 @@
-export const requestFriend = id => {
+export const fetchFriends = userId => {
+  return $.ajax({ method: "GET", url: `/api/users/${userId}/friendships` });
+};
+
+export const fetchRequesterIds = () => {
+  return $.ajax({ method: "GET", url: `/api/friendships/requester_ids` });
+};
+
+export const fetchRequestedUserIds = () => {
+  return $.ajax({ method: "GET", url: `/api/friendships/requested_user_ids` });
+};
+
+export const requestFriend = userId => {
   return $.ajax({
     method: "POST",
-    url: `/api/users/${id}/friendships`
+    url: `/api/users/${userId}/friendships`
   });
 };
 
-export const acceptRequest = id => {
-  return $.ajax({ method: "PATCH", url: `/api/friendships/${id}` });
+export const acceptRequest = requesterId => {
+  return $.ajax({
+    method: "PATCH",
+    url: `/api/users/${requesterId}/friendships`
+  });
 };
 
-export const deleteRequest = id => {
-  return $.ajax({ method: "DELETE", url: `/api/friendships/${id}` });
+export const deleteRequest = requesterId => {
+  return $.ajax({
+    method: "DELETE",
+    url: `/api/users/${requesterId}/friendships`,
+    data: requesterId
+  });
 };
 
-window.requestFriend = requestFriend;
-window.acceptRequest = acceptRequest;
-window.deleteRequest = deleteRequest;
+// window.requestFriend = requestFriend;
+// window.fetchFriends = fetchFriends;
+// window.acceptRequest = acceptRequest;
+// window.deleteRequest = deleteRequest;
+
+

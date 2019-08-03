@@ -8,7 +8,7 @@ export const receiveUserDetail = user => ({
   user
 });
 
-const receiveUsers = users => ({
+export const receiveUsers = users => ({
   type: RECEIVE_USERS,
   users
 });
@@ -33,8 +33,3 @@ export const updateUser = formUser => dispatch =>
 
 export const deleteUser = userId => dispatch =>
   ApiUsersUtil.deleteUser(userId).then(() => dispatch(removeUser(userId)));
-
-window.fetchUser = fetchUser;
-window.fetchUsers = fetchUsers;
-window.updateUser = updateUser;
-window.deleteUser = deleteUser;

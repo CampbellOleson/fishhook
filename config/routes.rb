@@ -5,12 +5,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do 
     resources :users, only: [:create, :update, :destroy, :show, :index] do 
-      resources :friendships, only: [:create ]
+      resources :friendships, only: [:create, :index]
     end
-    resources :friendships, only: [:destroy, :update]
     resource :session, only: [:create, :destroy]
+    patch '/users/:requester_id/friendships' => 'friendships#update', as: :update
+    delete '/users/:requester_id/friendships' => 'friendships#update', as: :destroy
+    get '/friendships/requester_ids' => 'friendships#requester_ids', as: :requester_ids
+    get '/friendships/requested_user_ids' => 'friendships#requested_user_ids', as: :requested_user_ids
   end
 end
-
-# this isn't necissary because this info is sent up w user show
-# get '/friends/pending_request_users' => 'friends#pending_request_users', as: :pending_request_users

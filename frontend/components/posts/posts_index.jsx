@@ -1,5 +1,4 @@
 import React from "react";
-import LoggedInNavContainer from "../nav_bar/loggedin_nav_container";
 
 class PostsIndex extends React.Component {
   constructor(props) {
@@ -9,7 +8,6 @@ class PostsIndex extends React.Component {
   render() {
     return (
       <div id="posts_index_content">
-        <LoggedInNavContainer />
         <div id="temp_background">
           <p id="temp_title">Howdy Folks!</p>
           <p id="temp_blurb">

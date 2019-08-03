@@ -14,41 +14,33 @@ class User < ApplicationRecord
   class_name: :Friendship,
   foreign_key: :requested_id
 
+  def friends
+    friends = []
+    friend_ids.each do |id|
+      friends << User.find(id)
+    end
+    return friends
+  end
+
   def friend_ids
     return requested_friend_ids.concat(requester_friend_ids)
   end
 
-  def pending_request_ids
+  def requester_ids
     ids = []
-    pending_requests.each do |req|
-      ids << req.id
-    end
-  return ids
-  end
-
-  def outgoing_request_ids
-    ids = []
-      outgoing_requests.each do |req|
-        ids << req.id
+      friend_requests.each do |req|
+        ids << req.requester_id
       end
     return ids
   end
 
-  # def pending_friend_ids
-  #   ids = []
-  #     pending_requests.each do |req|
-  #       ids << req.requester_id
-  #     end
-  #   return ids
-  # end
-
-  # def outgoing_friend_ids
-  #   ids = []
-  #     outgoing_requests.each do |req|
-  #       ids << req.requested_id
-  #     end
-  #   return ids
-  # end
+  def requested_user_ids
+    ids = []
+      outgoing_requests.each do |req|
+        ids << req.requested_id
+      end
+    return ids
+  end
 
   def self.find_by_credentials(email,password)
     user = User.find_by(email: email)
@@ -75,8 +67,6 @@ class User < ApplicationRecord
     self.session_token
   end
 
-  private
-
   def requester_friend_ids
     requesters = requester_friendships.where(pending: false).to_a
     ids = []
@@ -95,7 +85,7 @@ class User < ApplicationRecord
     return ids
   end
 
-  def pending_requests
+  def friend_requests
     return requested_friendships.where(pending: true).to_a
   end
 

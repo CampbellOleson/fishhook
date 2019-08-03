@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { currentUser } from "../../reducers/selectors";
 
 const LoggedInNav = props => {
   return (
@@ -6,6 +8,7 @@ const LoggedInNav = props => {
       <a href="/">
         <img className="logo" src={window.fishbook_logo} />
       </a>
+      <Link to={`/users/${props.currentUser.id}`}>Profile</Link>
       <button id="logout_button" onClick={props.logout}>
         Log Out
       </button>

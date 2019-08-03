@@ -23,10 +23,28 @@ class Api::FriendshipsController < ApplicationController
     friend_request.destroy
   end
 
+  def index
+    @friends = selected_user.friends
+    render :friends
+  end
+
+  def requests
+    @requests = current_user.friend_requests
+    render :requests
+  end
+
+  def requester_ids
+    render json: current_user.requester_ids
+  end
+
+  def requested_user_ids
+    render json: current_user.requested_user_ids
+  end
+
   private 
 
   def friend_request
-    @friend_request = Friendship.find(params[:id])
+    @friend_request = Friendship.find_by_attrs(params[:requester_id], current_user.id)
   end
 
   def selected_user
