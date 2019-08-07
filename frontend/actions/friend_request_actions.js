@@ -1,18 +1,20 @@
 import * as ApiFriendRequestUtil from "../util/api_friend_request_util";
 import { receiveUsers } from "../actions/user_actions";
-export const RECEIVE_REQUESTED_USER_IDS = "RECEIVE_REQUESTED_USER_IDS";
+export const RECEIVE_REQUESTED_USER_ID = "RECEIVE_REQUESTED_USER_ID";
 export const APPROVE_FRIEND_REQUEST = "APPROVE_FRIEND_REQUEST";
 export const REMOVE_FRIEND_REQUEST = "REMOVE_FRIEND_REQUEST";
 export const RECEIVE_REQUESTER_IDS = "RECEIVE_REQUESTER_IDS";
+export const RECEIVE_REQUEST_INFO = "RECEIVE_REQUEST_INFO";
 
-const receiveRequesterIds = ids => ({
-  type: RECEIVE_REQUESTER_IDS,
-  ids
+const receiveRequestInfo = info => ({
+  type: RECEIVE_REQUEST_INFO,
+  requestedUserIds: info["requested_user_ids"],
+  requesterIds: info["requester_ids"]
 });
 
-const receiveRequestedUserIds = ids => ({
-  type: RECEIVE_REQUESTED_USER_IDS,
-  ids
+const receiveRequestedUserId = id => ({
+  type: RECEIVE_REQUESTED_USER_ID,
+  id: Number(id)
 });
 
 const approveFriendRequest = request => ({
@@ -30,25 +32,31 @@ export const getFriends = userId => dispatch =>
     friends => dispatch(receiveUsers(friends)) // error cb needed
   );
 
-export const getRequesterIds = () => dispatch =>
-  ApiFriendRequestUtil.fetchRequesterIds().then(
-    ids => dispatch(receiveRequesterIds(ids)) // error cb needed
+export const getRequesters = () => dispatch =>
+  ApiFriendRequestUtil.fetchRequesters().then(requesters =>
+    dispatch(receiveUsers(requesters))
   );
 
-export const getRequestedUserIds = () => dispatch =>
-  ApiFriendRequestUtil.fetchRequestedUserIds().then(
-    ids => dispatch(receiveRequestedUserIds(ids)) // error cb needed
-  );
+export const getRequestInfo = () => {
+  return dispatch => {
+    return ApiFriendRequestUtil.fetchRequestInfo().then(info => {
+      return dispatch(receiveRequestInfo(info));
+    });
+  };
+};
 
 export const issueFriendRequest = userId => dispatch =>
   ApiFriendRequestUtil.requestFriend(userId).then(
-    () => dispatch(receiveRequestedUserIds([userId])) // error cb needed
+    () => dispatch(receiveRequestedUserId(userId)) // error cb needed
   );
 
-export const acceptFriendRequest = requesterId => dispatch =>
-  ApiFriendRequestUtil.acceptRequest(requesterId).then(
-    request => dispatch(approveFriendRequest(request)) // error cb needed
-  );
+export const acceptFriendRequest = requesterId => {
+  return dispatch => {
+    return ApiFriendRequestUtil.acceptRequest(requesterId).then(request => {
+      return dispatch(approveFriendRequest(request));
+    });
+  };
+};
 
 export const deleteFriendRequest = requesterId => dispatch =>
   ApiFriendRequestUtil.deleteRequest(requesterId).then(
@@ -56,8 +64,8 @@ export const deleteFriendRequest = requesterId => dispatch =>
   );
 
 // window.getFriends = getFriends; // good
-// window.getRequesterIds = getRequesterIds; // good
 // window.acceptFriendRequest = acceptFriendRequest; // good
 // window.issueFriendRequest = issueFriendRequest; // good
-// window.getRequestedUserIds = getRequestedUserIds; // good
 // window.deleteFriendRequest = deleteFriendRequest; // good
+// window.getRequestInfo = getRequestInfo;
+window.getRequesters = getRequesters;

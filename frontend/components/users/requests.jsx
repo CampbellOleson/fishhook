@@ -1,32 +1,29 @@
 import React from "react";
 import UserIndexItem from "./user_index_item";
 
-class Friends extends React.Component {
+class Requests extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      friends: []
-    };
   }
 
   render() {
-    return this.props.friends.length > 0 ? (
+    return this.props.requesters.length > 0 ? (
       <div>
-        <p>Friends:</p>
         <ul>
-          {this.props.friends.map((user, idx) => (
+          {this.props.requesters.map((user, idx) => (
             <UserIndexItem user={user} key={idx} />
           ))}
         </ul>
       </div>
     ) : (
-      <p>No friends yet</p>
+      <div>No requests</div>
     );
   }
 
   componentDidMount() {
-    this.props.getFriends(this.props.user.id);
+    this.props.getRequesters();
+    this.props.getRequestInfo();
   }
 }
 
-export default Friends;
+export default Requests;

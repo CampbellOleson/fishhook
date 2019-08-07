@@ -15,11 +15,19 @@ class User < ApplicationRecord
   foreign_key: :requested_id
 
   def friends
-    friends = []
+    f = []
     friend_ids.each do |id|
-      friends << User.find(id)
+      f << User.find(id)
     end
-    return friends
+    return f
+  end
+
+  def requesters
+    r = []
+    requester_ids.each do |id|
+      r << User.find(id)
+    end
+    return r
   end
 
   def friend_ids

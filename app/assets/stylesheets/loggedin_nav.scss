@@ -6,17 +6,105 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#logout_button {
-  background-color: darkslategrey;
+#logged_in_logo {
+  height: 45px;
+  width: 125px;
+  margin-top: 8px;
+}
+
+// #nav_search {
+//   font-family: inherit;
+//   font-weight: 100;
+//   height: 20px;
+//   width: 350px;
+//   margin-top: 13px;
+//   border: 1px solid darkslategrey;
+//   border-radius: 2px;
+//   background-color: whitesmoke;
+//   color: gray;
+// }
+
+.search_button {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: image-url("search_icon.png");
+  border-radius: 0px 3px 3px 0px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 27px;
+  height: 27px;
+  padding: 7px;
+}
+
+#nav_search_bar {
+  margin-left: 7px;
+  margin-top: 16px;
+}
+
+#nav_search_bar input {
+  padding: 3px;
+  font-family: inherit;
+  font-size: 14px;
+  height: 20px;
+  width: 400px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid whitesmoke;
+  border-radius: 3px 0px 0px 3px;
+  background-color: white;
+  color: gray;
+}
+
+.search_and_logo {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.logged_in_nav_links {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
-  border-radius: 1.8px;
-  margin-left: 12px;
-  width: 70px;
-  height: 24px;
-  margin-top: 40px;
-  font-weight: 530;
-  font-size: 13px;
-  border: 1px solid whitesmoke;
+  margin-top: 11px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 34%;
+  margin-bottom: 15px;
+}
+
+#profile_link {
+  color: inherit;
+  margin-top: inherit;
+  text-decoration: none;
+  border-right: 1px solid whitesmoke;
+  padding-right: 30px;
+}
+
+#home_link {
+  color: inherit;
+  margin-top: inherit;
+  text-decoration: none;
+  border-right: 1px solid whitesmoke;
+  padding-right: 30px;
+}
+
+#requests_link {
+  color: inherit;
+  margin-top: inherit;
+  text-decoration: none;
+  border-right: 1px solid whitesmoke;
+  padding-right: 30px;
+}
+
+#logout_link {
+  color: inherit;
+  margin-top: inherit;
+  text-decoration: none;
+  padding-right: 30px;
 }
 
 #temp_title {

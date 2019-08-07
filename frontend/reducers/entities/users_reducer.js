@@ -19,6 +19,9 @@ const usersReducer = (state = {}, action) => {
     case APPROVE_FRIEND_REQUEST:
       const currentUser = state[action.request.requested_id];
       const newFriendId = action.request.requester_id;
+      if (state[newFriendId].friend_ids) {
+        state[newFriendId].friend_ids.push(currentUser.id);
+      }
       currentUser.friend_ids.push(newFriendId);
       return merge({}, state, { [currentUser.id]: currentUser });
     case DELETE_USER:
@@ -31,3 +34,7 @@ const usersReducer = (state = {}, action) => {
 };
 
 export default usersReducer;
+
+// line 24 conditional is here to handle case of accepting friend request from dropdown menu
+// we don't have to update state right away and add ourselved to their friend id, it will be loaded
+// if we veiw their detail aka friends list

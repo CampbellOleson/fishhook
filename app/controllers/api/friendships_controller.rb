@@ -29,16 +29,14 @@ class Api::FriendshipsController < ApplicationController
   end
 
   def requests
-    @requests = current_user.friend_requests
+    @requester_ids = current_user.requester_ids
+    @requested_user_ids = current_user.requested_user_ids
     render :requests
   end
 
-  def requester_ids
-    render json: current_user.requester_ids
-  end
-
-  def requested_user_ids
-    render json: current_user.requested_user_ids
+  def requesters
+    @requesters = current_user.requesters
+    render :requesters
   end
 
   private 

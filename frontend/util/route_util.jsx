@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, Redirect } from "react-router-dom";
 import SplashPage from "../components/session/splash_page";
 import PostsIndexContainer from "../components/posts/posts_index_container";
 
@@ -16,4 +16,14 @@ const Home = ({ loggedIn, path, exact }) => (
   />
 );
 
+const Protected = ({ loggedIn, path, component: Component }) => (
+  <Route
+    path={path}
+    render={props =>
+      loggedIn ? <Component {...props} /> : <Redirect to="/" />
+    }
+  />
+);
+
 export const HomeRoute = withRouter(connect(mapStateToProps)(Home));
+export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));

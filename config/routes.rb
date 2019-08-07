@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     end
     resource :session, only: [:create, :destroy]
     patch '/users/:requester_id/friendships' => 'friendships#update', as: :update
-    delete '/users/:requester_id/friendships' => 'friendships#update', as: :destroy
-    get '/friendships/requester_ids' => 'friendships#requester_ids', as: :requester_ids
-    get '/friendships/requested_user_ids' => 'friendships#requested_user_ids', as: :requested_user_ids
+    delete '/users/:requester_id/friendships' => 'friendships#destroy', as: :destroy
+    get '/friendships/requests' => 'friendships#requests', as: :requests
+    get '/friendships/requesters' => 'friendships#requesters', as: :requesters
   end
 end

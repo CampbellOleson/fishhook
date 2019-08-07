@@ -5,7 +5,7 @@ const LoggedOutNav = props => {
   return (
     <div id="loggedout_nav_bar">
       <a href="/">
-        <img className="logo" src={window.fishbook_logo} />
+        <img id="logged_out_logo" src={window.fishbook_logo} />
       </a>
       <LoginFormContainer />
     </div>
