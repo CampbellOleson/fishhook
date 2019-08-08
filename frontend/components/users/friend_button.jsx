@@ -13,33 +13,59 @@ class FriendButton extends React.Component {
   }
 
   render() {
-    const { currentUser, userId, requestedUserIds, requesterIds } = this.props;
+    const {
+      currentUser,
+      userId,
+      requestedUserIds,
+      requesterIds,
+      renderType,
+      renderSize
+    } = this.props;
+    const renderClass =
+      renderType === "user_show_page"
+        ? "respond_buttons"
+        : "requests_index_respond_buttons";
+    const friendButton =
+      renderSize === "mini" ? "mini_friend_button" : "friend_button";
     if (!currentUser || !userId || !requestedUserIds || !requesterIds)
       return null;
     if (currentUser.id === Number(userId)) return null;
     if (currentUser.friend_ids.includes(Number(userId))) {
-      return <button id="friend_button">Friends</button>;
+      return (
+        <button className="friend_button">
+          <p>✔︎ Friends</p>
+        </button>
+      );
     } else if (requestedUserIds.includes(Number(userId))) {
       return (
-        <button id="friend_button" onClick={this.deleteRequestClickHandler}>
-          Requested
+        <button className="friend_button extra_width_friend_button">
+          <p>✔︎ Requested</p>
         </button>
       );
     } else if (requesterIds.includes(Number(userId))) {
       return (
-        <div id="friend_button">
-          <button id="accept_request" onClick={this.acceptRequestClickHandler}>
-            Confirm
+        <div className={renderClass}>
+          <button
+            className={friendButton}
+            onClick={this.acceptRequestClickHandler}
+          >
+            ✔︎ Confirm
           </button>
-          <button id="delete_request" onClick={this.deleteRequestClickHandler}>
-            Delete
+          <button
+            className={friendButton}
+            onClick={this.deleteRequestClickHandler}
+          >
+            ✖︎ Delete
           </button>
         </div>
       );
     } else {
       return (
-        <button id="friend_button" onClick={this.requestFriendClickHandler}>
-          Add Friend
+        <button
+          className="friend_button extra_width_friend_button"
+          onClick={this.requestFriendClickHandler}
+        >
+          <p>✚ Add Friend</p>
         </button>
       );
     }

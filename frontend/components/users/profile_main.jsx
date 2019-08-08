@@ -15,17 +15,28 @@ class ProfileMain extends React.Component {
 
   render() {
     return this.props.user ? (
-      <div>
-        <div>
-          <p>{this.props.user.fname}</p>
-          <p>{this.props.user.lname}</p>
-          <p>{this.props.user.bio}</p>
+      <div className="main_profile_column">
+        <div className="cover_photo_container">
+          <div className="user_overlay">
+            <div className="profile_photo_container" />
+            <p className="user_full_name">
+              {this.props.user.fname.concat(" ").concat(this.props.user.lname)}
+            </p>
+            <div className="friend_button_container">
+              <FriendButtonContainer renderType="user_show_page" />
+            </div>
+          </div>
         </div>
-        <FriendButtonContainer />
-        <div>Profile Nav</div>
-        <button onClick={this.renderFriends}>Friends</button>
-        <button onClick={this.renderPosts}>Posts</button>
+        <div className="profile_nav">
+          <a id="posts_toggle_container" onClick={this.renderPosts}>
+            <p>Posts</p>
+          </a>
+          <a id="friends_toggle_container" onClick={this.renderFriends}>
+            <p>Friends</p>
+          </a>
+        </div>
         <ProfileContent toRender={this.state.toRender} user={this.props.user} />
+        <div id="profile_footer" />
       </div>
     ) : null;
   }

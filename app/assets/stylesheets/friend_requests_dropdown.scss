@@ -1,0 +1,126 @@
+.friend_requests_dropdown {
+  width: 380px;
+  min-height: 80px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 58px;
+  background-color: whitesmoke;
+  display: flex;
+  color: #383838;
+  flex-direction: column;
+  align-content: flex-start;
+  box-shadow: 3px 3px 6px gray;
+  border-radius: 3px;
+}
+
+.friend_requests_dropdown:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: 0;
+  right: 23%;
+  transform: translateX(-50%) rotate(45deg);
+  border-left: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  top: -8px;
+}
+
+#requests_header {
+  border-bottom: 1px solid lightgray;
+  font-family: inherit;
+  height: 40px;
+  width: 100%;
+  z-index: 10;
+  color: inherit;
+  background-color: #e8e8e8;
+  border-radius: 3px 3px 0px 0px;
+  margin-bottom: 10px;
+}
+
+#requests_header p {
+  padding: 10px;
+  margin-top: 3px;
+}
+
+#no_requests {
+  margin: 0 auto;
+  font-family: inherit;
+  color: inherit;
+}
+
+.requester_index_item {
+  width: 95%;
+  height: 55px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  background-color: #e8e8e8;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.requester_index_link {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+
+.requester_profile_photo {
+  height: 30px;
+  width: 30px;
+  margin: 7px;
+  border-radius: 3px;
+  border: 3px solid whitesmoke;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.helpscout.com/images/blog/steve-jobs.jpg");
+}
+
+.requester_full_name {
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkcyan;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.requester_full_name:hover {
+  text-decoration: underline;
+}
+
+.requester_profile_photo:hover {
+  box-shadow: 1px 1px 3px gray;
+}
+
+#requester_friend_button {
+  margin-right: 10px;
+  width: 40px;
+  height: 15px;
+}
+
+.requests_index_respond_buttons {
+  height: 25px;
+  padding-right: 5px;
+}
+
+.mini_friend_button {
+  width: 70px;
+  height: 25px;
+  background-color: whitesmoke;
+  color: grey;
+  border-radius: 2px;
+  margin-left: 5px;
+  margin-top: 2px;
+  font-weight: 530;
+  font-size: 10px;
+  border: 1px solid lightgray;
+}

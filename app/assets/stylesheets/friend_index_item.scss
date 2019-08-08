@@ -1,0 +1,53 @@
+.friend_index_item {
+  width: 90%;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #e8e8e8;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend_index_link {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+
+.friend_profile_photo {
+  height: 70px;
+  width: 70px;
+  margin: 7px;
+  border-radius: 3px;
+  border: 3px solid whitesmoke;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.helpscout.com/images/blog/steve-jobs.jpg");
+}
+
+.friend_full_name {
+  font-size: 22px;
+  margin-left: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkcyan;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.friend_full_name:hover {
+  text-decoration: underline;
+}
+
+.friends_profile_photo:hover {
+  box-shadow: 1px 1px 3px gray;
+}
+
+.friends_index_friend_button {
+  margin-right: 45px;
+}

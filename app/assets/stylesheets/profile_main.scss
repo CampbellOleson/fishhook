@@ -1,0 +1,136 @@
+.main_profile_column {
+  width: 950px;
+  padding-top: 55px;
+  margin: 0 auto;
+  background-color: white;
+  border: none;
+}
+
+.cover_photo_container {
+  background-image: image-url("lady.jpg");
+  height: 250px;
+  overflow: visible;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.user_overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.profile_photo_container {
+  width: 170px;
+  height: 170px;
+  border: 4px solid whitesmoke;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.helpscout.com/images/blog/steve-jobs.jpg");
+  position: absolute;
+  top: 100px;
+  margin-left: 20px;
+}
+
+.user_full_name {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  padding: 15px;
+  font-size: 35px;
+  margin-left: 230px;
+  font-weight: 600;
+  color: whitesmoke;
+  text-shadow: 3px 3px 5px black;
+}
+
+.friend_button_container {
+  padding: 22px;
+  width: 240px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile_nav {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  font-size: 20px;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+}
+
+#posts_toggle_container {
+  margin-left: 260px;
+  height: 100%;
+  cursor: pointer;
+  border-left: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+#friends_toggle_container {
+  height: 100%;
+  cursor: pointer;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+#posts_toggle_container p {
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#friends_toggle_container p {
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#posts_toggle_container:hover {
+  background-color: lightgray;
+}
+
+#friends_toggle_container:hover {
+  background-color: lightgray;
+}
+
+.friend_button {
+  background-color: whitesmoke;
+  color: grey;
+  border-radius: 2px;
+  margin-left: 12px;
+  margin-top: 2px;
+  width: 100px;
+  height: 30px;
+  font-weight: 530;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.extra_width_friend_button {
+  width: 115px;
+}
+
+.friend_button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.respond_buttons {
+  width: 100%;
+}
+
+#profile_footer {
+  height: 20px;
+  background-color: white;
+}

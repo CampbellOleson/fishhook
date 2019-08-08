@@ -11,16 +11,27 @@ class Friends extends React.Component {
 
   render() {
     return this.props.friends.length > 0 ? (
-      <div>
-        <p>Friends:</p>
+      <div id="friends_content">
+        <div id="friends_header">
+          <p id="friends_title">Friends</p>
+        </div>
         <ul>
           {this.props.friends.map((user, idx) => (
-            <UserIndexItem user={user} key={idx} />
+            <UserIndexItem user={user} key={idx} renderType={"friends"} />
           ))}
         </ul>
+        <div id="friends_content_footer" />
       </div>
     ) : (
-      <p>No friends yet</p>
+      <div id="friends_content">
+        <div id="friends_header">
+          <p id="friends_title">Friends</p>
+        </div>
+        <div id="no_friends_container">
+          <p id="no_friends_yet">No friends yet</p>
+        </div>
+        <div id="no_friends_footer" />
+      </div>
     );
   }
 

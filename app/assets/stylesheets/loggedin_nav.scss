@@ -4,63 +4,16 @@
   justify-content: space-around;
   background-color: darkcyan;
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 10;
 }
 
 #logged_in_logo {
   height: 45px;
   width: 125px;
   margin-top: 8px;
-}
-
-// #nav_search {
-//   font-family: inherit;
-//   font-weight: 100;
-//   height: 20px;
-//   width: 350px;
-//   margin-top: 13px;
-//   border: 1px solid darkslategrey;
-//   border-radius: 2px;
-//   background-color: whitesmoke;
-//   color: gray;
-// }
-
-.search_button {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: image-url("search_icon.png");
-  border-radius: 0px 3px 3px 0px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-right: 1px solid grey;
-  width: 27px;
-  height: 27px;
-  padding: 7px;
-}
-
-#nav_search_bar {
-  margin-left: 7px;
-  margin-top: 16px;
-}
-
-#nav_search_bar input {
-  padding: 3px;
-  font-family: inherit;
-  font-size: 14px;
-  height: 20px;
-  width: 400px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
-  border-right: 1px solid whitesmoke;
-  border-radius: 3px 0px 0px 3px;
-  background-color: white;
-  color: gray;
-}
-
-.search_and_logo {
-  width: 45%;
-  display: flex;
-  justify-content: center;
 }
 
 .logged_in_nav_links {
@@ -84,12 +37,22 @@
   padding-right: 30px;
 }
 
+#profile_link:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
 #home_link {
   color: inherit;
   margin-top: inherit;
   text-decoration: none;
   border-right: 1px solid whitesmoke;
   padding-right: 30px;
+}
+
+#home_link:hover {
+  color: lightgray;
+  cursor: pointer;
 }
 
 #requests_link {
@@ -100,6 +63,11 @@
   padding-right: 30px;
 }
 
+#requests_link:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
 #logout_link {
   color: inherit;
   margin-top: inherit;
@@ -107,24 +75,13 @@
   padding-right: 30px;
 }
 
+#logout_link:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
 #temp_title {
+  padding-top: 70px;
   font-size: 100px;
   margin: 30px;
-}
-
-#temp_blurb {
-  font-size: 39px;
-  margin: 30px;
-}
-
-#temp_background {
-  height: 100%;
-  background-position: 0px 350px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: image-url("placeholder.jpeg");
-}
-
-#posts_index_content {
-  height: 2000px;
 }
