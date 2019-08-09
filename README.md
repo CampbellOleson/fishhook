@@ -10,7 +10,7 @@
 * User profile page
 * Posts and feed
 
-## Features
+## Features coming soon
 * Profile photos and cover photos
 * Attach photos to posts and upload photos to accounts
 * Google Maps location links attached to posts
