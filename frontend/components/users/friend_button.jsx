@@ -1,6 +1,8 @@
 import React from "react";
 
 class FriendButton extends React.Component {
+  _isMounted = false;
+
   constructor(props) {
     super(props);
     this.requestFriendClickHandler = this.requestFriendClickHandler.bind(this);
@@ -87,12 +89,19 @@ class FriendButton extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getRequestInfo(this.props.state).then(() =>
-      this.setState({
-        requestedUserIds: this.props.requestedUserIds,
-        requesterIds: this.props.requesterIds
-      })
-    );
+    this._isMounted = true;
+    this.props.getRequestInfo(this.props.state).then(() => {
+      if (this._isMounted) {
+        this.setState({
+          requestedUserIds: this.props.requestedUserIds,
+          requesterIds: this.props.requesterIds
+        });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 }
 

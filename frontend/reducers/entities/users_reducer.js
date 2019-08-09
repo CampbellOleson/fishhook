@@ -6,6 +6,7 @@ import {
   RECEIVE_USERS,
   DELETE_USER
 } from "../../actions/user_actions";
+import { RECEIVE_POST } from "../../actions/post_actions";
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -28,6 +29,14 @@ const usersReducer = (state = {}, action) => {
       const newState = Object.assign({}, state);
       delete newState[action.userId];
       return newState;
+    case RECEIVE_POST:
+      const _state = merge({}, state);
+      const _post = action.post[Number(Object.keys(action.post)[0])];
+      const _currentUser = _state[_post.poster_id];
+      if (_currentUser.post_ids) {
+        _currentUser.post_ids.push(_post.id);
+      }
+      return _state;
     default:
       return state;
   }

@@ -19,3 +19,26 @@ export const allRequesters = (users, requesterIds) => {
   }
   return requesters;
 };
+
+export const allPosts = postsObj => {
+  const ids = Object.keys(postsObj);
+  ids.sort((a, b) => b - a);
+  const postsArr = ids.map(id => postsObj[id]);
+  return postsArr;
+};
+
+export const allUserPosts = (postsObj, user) => {
+  const ids = Object.keys(postsObj);
+  const userIds = [];
+  if (ids.length > 0 && user.post_ids) {
+    ids.forEach(id => {
+      id = Number(id);
+      if (user.post_ids.includes(id)) {
+        userIds.push(id);
+      }
+    });
+    userIds.sort((a, b) => b - a);
+    const postsArr = userIds.map(id => postsObj[id]);
+    return postsArr;
+  }
+};

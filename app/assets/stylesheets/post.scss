@@ -1,0 +1,82 @@
+.post_container {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px gray;
+  min-height: 180px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #383838;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.poster_container {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  color: inherit;
+  height: 55px;
+  border-bottom: 1px solid lightgray;
+  background-color: inherit;
+  padding-left: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.poster_container p {
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.post_profile_photo {
+  width: 42px;
+  height: 42px;
+  border: 2px solid lightgray;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.helpscout.com/images/blog/steve-jobs.jpg");
+}
+
+.post_profile_photo:hover {
+  cursor: pointer;
+}
+
+.poster_container p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.feed_user_link {
+  margin-top: 5px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.post_body_container {
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  margin: 0 auto;
+  min-height: 70px;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment_form_container {
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 6px;
+  width: 96%;
+  margin-bottom: 10px;
+}
+
+.post_footstopper {
+  width: 100%;
+  height: 5px;
+}

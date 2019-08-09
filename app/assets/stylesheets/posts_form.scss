@@ -1,0 +1,59 @@
+.post_form_container {
+  color: #383838;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px gray;
+  margin: 0 auto;
+  min-height: 80px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.post_form_header {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  font-family: inherit;
+  height: 30px;
+  font-size: 16px;
+  border-bottom: 1px solid lightgray;
+}
+
+.post_form_header p {
+  padding-top: 8px;
+  margin-left: 20px;
+}
+
+.post_form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.post_body {
+  font-size: 16px;
+  background-color: white;
+  color: inherit;
+  padding: 20px;
+  border-radius: 2px;
+  min-height: 30px;
+  resize: none;
+  border: none;
+}
+
+.post_submit_button {
+  width: 90%;
+  border: 1px solid darkgray;
+  height: 30px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: darkcyan;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.post_submit_button:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+}

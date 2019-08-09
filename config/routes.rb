@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do 
     resources :users, only: [:create, :update, :destroy, :show, :index] do 
       resources :friendships, only: [:create, :index]
+      resources :posts, only: [:index]
     end
     resource :session, only: [:create, :destroy]
+    resources :posts, only: [:create, :update, :destroy]
+    get "/feed" => "posts#feed", as: :feed
     patch '/users/:requester_id/friendships' => 'friendships#update', as: :update
     delete '/users/:requester_id/friendships' => 'friendships#destroy', as: :destroy
     get '/friendships/requests' => 'friendships#requests', as: :requests

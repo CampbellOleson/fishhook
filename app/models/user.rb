@@ -14,6 +14,17 @@ class User < ApplicationRecord
   class_name: :Friendship,
   foreign_key: :requested_id
 
+  has_many :posts,
+  foreign_key: :poster_id
+
+  def post_ids
+    ids = []
+    self.posts.each do |post|
+      ids << post.id
+    end
+    return ids
+  end
+
   def friends
     f = []
     friend_ids.each do |id|

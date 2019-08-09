@@ -19,6 +19,7 @@
     "webpack-cli": "^3.3.6"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "redux-devtools-extension": "^2.13.8"
   },
   "engines": {
@@ -27,6 +28,6 @@
   },
   "scripts": {
     "start": "webpack -w --mode=development",
-    "postinstall": "webpack --mode=production"
+    "postinstall": "webpack -w --mode=production"
   }
 }
