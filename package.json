@@ -28,6 +28,6 @@
   },
   "scripts": {
     "start": "webpack -w --mode=development",
-    "postinstall": "webpack -w --mode=production"
+    "postinstall": "webpack --mode=production"
   }
 }
