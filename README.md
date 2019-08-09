@@ -4,3 +4,13 @@
 
 ![FishHook splash page](file:/Users/campbelloleson/Desktop/Screen%20Shot%202019-08-09%20at%2010.55.53%20AM.png)
 
+## Features
+* Account creation, login, and guest login
+* Friend requests and friend relationships
+* User profile page
+* Posts and feed
+
+## Features
+* Profile photos and cover photos
+* Attach photos to posts and upload photos to accounts
+* Google Maps location links attached to posts
