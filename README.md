@@ -4,12 +4,9 @@
 
 ![Splash Page](./screenshots/splash.png)
 
+## Features
+ * fishhook
+
 ![Profile Friends](./screenshots/friends.png)
 
 ![Home Page](./screenshots/home.png)
-
-## Features
-* Account creation, login, and guest login
-* Friend requests and friend relationships
-* User profile page
-* Posts and feed
