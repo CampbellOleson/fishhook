@@ -12,12 +12,11 @@
   - If a user accepts a "friend request", this status is changed to "accepted" and the "friend request" becomes in effect a "friendship" association between the two associated users. 
   - When a user rejects a "friend request", the joins table entry is simply deleted from the database, allowing either user to submit another friend request if they would like. 
   
+![Profile Friends](./screenshots/friends.png)
+  
   **Feed**
   - The main purpose of Fishhook is to enable users to share fishing-related content with their friends. The primary component of Fishhook is the "feed". 
   - When on the home page (assuming you are signed in) you will see all of the posts and activity of your Fishhook friends! Underlying this is a Rails ORM filtering system that leverages a user's "friendships" associations to only fetch content that is relevant to them. Feed is sorted chronologically, with the newest posts appearing first.
   - If you navigate to a user's profile page, you will see their "user feed" component. This displays the posts and activities of a particular user (assuming that their profile is public). Deciding if you should accept a friend request? Scroll through that user's feed and see how they might be connected to you. 
   
-
-![Profile Friends](./screenshots/friends.png)
-
 ![Home Page](./screenshots/home.png)
