@@ -20,5 +20,3 @@
   - If you navigate to a user's profile page, you will see their "user feed" component. This displays the posts and activities of a particular user (assuming that their profile is public). Deciding if you should accept a friend request? Scroll through that user's feed and see how they might be connected to you. 
   
 ![User Feed](./screenshots/profile.png)  
- 
-## Implementation Details
