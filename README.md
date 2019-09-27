@@ -1,6 +1,6 @@
 # [Fishhook](https://fish-hook.herokuapp.com/#/)
 
-Fishhook is a social media app specifically taylored for the worldwide community of fishing enthusiasts. On Fishhook, you can discover new fishing spots, share your best catches, and connect with fellow fishermen and fisherwomen! Fishhook is built with a Ruby on Rails backend, a PostgreSQL database and a React / Redux frontend.
+Fishhook is a social media app specifically taylored for the worldwide community of fishing enthusiasts. On Fishhook, you can discover new fishing spots, share your best catches, and connect with fellow fishermen and fisherwomen! **Fishhook is built with a Ruby on Rails backend, a PostgreSQL database and a React / Redux frontend.**
 
 ![Splash Page](./screenshots/splash.png)
 
