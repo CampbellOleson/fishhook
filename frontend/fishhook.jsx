@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import Root from "./components/Root";
 import configureStore from "./store/store";
 import http from "http";
-// import * as testingUtil from "./util/api_posts_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   const preloadedState = window.currentUser
