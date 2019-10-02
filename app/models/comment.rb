@@ -6,11 +6,5 @@ class Comment < ApplicationRecord
   class_name: :Post,
   foreign_key: :commentable_id
 
-  #not supporting comment threads yet
-
-  # belongs_to :parent_comment, -> { where self.comment_thread == false},
-  # class_name: :Comment,
-  # foreign_key: :commentable_id
-
 end
 
