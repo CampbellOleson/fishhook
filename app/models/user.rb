@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   def self.get_suggestions(search_params)
     search_text = search_params.titleize + '%'
-    suggested_users = User.where("fname LIKE ?", search_text)
+    suggested_users = User.where("fname LIKE ? OR lname LIKE ?", search_text, search_text)
     return suggested_users
   end
 
