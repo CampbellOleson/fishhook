@@ -3,7 +3,6 @@
   top: 70px;
   left: 18vw;
   width: 380px;
-  min-height: 85px;
   border: 1px solid lightgray;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
@@ -38,7 +37,7 @@
 #search-header {
   border-bottom: 1px solid lightgray;
   font-family: inherit;
-  height: 40px;
+  height: 30px;
   width: 100%;
   z-index: 10;
   color: inherit;
@@ -46,8 +45,20 @@
   border-radius: 3px 3px 0px 0px;
 }
 
+#search-header p {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#no-results {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: grey;
+}
+
 .search-index-item {
-  height: 50px;
   margin: 0 auto;
   border-bottom: 1px solid lightgray;
   display: flex;
@@ -60,6 +71,7 @@
   text-decoration: none;
   text-shadow: 1px 1px 1px gray;
   background-color: white;
+  padding: 10px;
 }
 
 .search-index-item:hover {

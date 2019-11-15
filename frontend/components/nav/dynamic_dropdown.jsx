@@ -23,7 +23,7 @@ class DynamicDropdown extends React.Component {
         <div id="search-header">
           <p>Find Users</p>
         </div>
-        <p>No results</p>
+        <p id="no-results">No results</p>
       </div>
     );
   }
