@@ -37,14 +37,14 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.all # to be filtered for friends later on
+    @users = User.all
   end
 
   private
 
   def user_params
     params.require(:user).permit(:fname,:lname,:email,:password,:bio) #can we have this optional bio key?
-  end #bio might go
+  end 
 
   def selected_user
     User.find(params[:id])

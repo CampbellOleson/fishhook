@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     delete '/users/:requester_id/friendships' => 'friendships#destroy', as: :destroy
     get '/friendships/requests' => 'friendships#requests', as: :requests
     get '/friendships/requesters' => 'friendships#requesters', as: :requesters
+    get '/suggestions' => 'suggestions#suggestions', as: :suggestions
   end
 end

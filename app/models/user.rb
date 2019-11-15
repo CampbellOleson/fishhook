@@ -17,6 +17,18 @@ class User < ApplicationRecord
   has_many :posts,
   foreign_key: :poster_id
 
+  def self.get_suggestions(search_params)
+    search_text = search_params.titleize + '%'
+    suggested_users = User.where("fname LIKE ?", search_text)
+    return suggested_users
+  end
+
+  def self.find_by_credentials(email,password)
+    user = User.find_by(email: email)
+    return nil unless user
+    user.is_password?(password) ? user : nil
+  end
+
   def post_ids
     ids = []
     self.posts.each do |post|
@@ -59,12 +71,6 @@ class User < ApplicationRecord
         ids << req.requested_id
       end
     return ids
-  end
-
-  def self.find_by_credentials(email,password)
-    user = User.find_by(email: email)
-    return nil unless user
-    user.is_password?(password) ? user : nil
   end
 
   def password=(password)

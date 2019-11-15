@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RequestsContainer from "../users/requests_container";
+import DynamicDropdownContainer from "./dynamic_dropdown_container";
+import { debounce } from "throttle-debounce";
 
 class LoggedInNav extends React.Component {
   constructor(props) {
     super(props);
     this.toggleRender = this.toggleRender.bind(this);
+    this.updateDropdown = this.updateDropdown.bind(this);
+    this.dynamicDropdown = this.dynamicDropdown.bind(this);
+    this.fetchSuggestionsThrottled = debounce(300, this.props.fetchSuggestions);
     this.state = {
-      renderRequests: false // how can I get this to close when redirect to a new link?
+      renderRequests: false,
+      search: ""
     };
   }
 
@@ -24,9 +30,14 @@ class LoggedInNav extends React.Component {
             <img id="logged_in_logo" src={window.fishbook_logo} />
           </a>
           <div id="nav_search_bar">
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={this.updateDropdown}
+            />
             <button className="search_button" />
           </div>
+          {this.dynamicDropdown()}
         </div>
         <div className="logged_in_nav_links">
           <Link to={`/users/${currentUser.id}`} id="profile_link">
@@ -45,6 +56,17 @@ class LoggedInNav extends React.Component {
         </div>
       </div>
     );
+  }
+
+  dynamicDropdown() {
+    return this.state.search ? <DynamicDropdownContainer /> : null;
+  }
+
+  updateDropdown(e) {
+    this.props.clearSuggestions();
+    let search = e.target.value;
+    this.setState({ search: search });
+    this.fetchSuggestionsThrottled(search);
   }
 
   toggleRender(e) {
