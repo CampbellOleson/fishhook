@@ -119,3 +119,14 @@ class User < ApplicationRecord
   end
 
 end
+
+  # I think this functionality can be handled by the update controller action
+  # def add_photo_url(user_id, cover, url)
+  #   user = User.find(user_id)
+  #   if cover
+  #     user.cover_photo_url = url
+  #   else 
+  #     user.profile_photo_url = url
+  #   end
+  #   user.save!
+  # end

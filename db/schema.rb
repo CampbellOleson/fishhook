@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_08_183017) do
+ActiveRecord::Schema.define(version: 2019_11_15_190231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2019_08_08_183017) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_photo_url"
+    t.string "cover_photo_url"
     t.index ["email"], name: "index_users_on_email"
     t.index ["fname"], name: "index_users_on_fname"
     t.index ["lname"], name: "index_users_on_lname"

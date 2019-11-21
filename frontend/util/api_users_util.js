@@ -34,3 +34,7 @@ export const deleteUser = id => {
     url: `api/users/${id}`
   });
 };
+
+// const token = document.getElementsByName('csrf-token')[0].content
+// or
+// var token = $('meta[name=csrf-token]').attr('content');

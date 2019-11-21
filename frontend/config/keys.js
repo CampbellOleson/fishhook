@@ -1,0 +1,5 @@
+module.exports = {
+  S3_BUCKET: "fishhook",
+  AWS_ACCESS_KEY_ID: "AKIAW6EXXVXTNGZDKRFT",
+  AWS_SECRET_ACCESS_KEY_ID: "5iOrVGsIhFkvwQ5YYPa9bGq+GBGgaupjtH01HWIT"
+};

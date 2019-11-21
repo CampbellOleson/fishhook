@@ -1,5 +1,7 @@
 class Api::UsersController < ApplicationController
 
+  # this line will disable csrf auth - only include for testing 
+  # skip_before_action :verify_authenticity_token
 
   def create
     @user = User.new(user_params)
@@ -43,7 +45,7 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:fname,:lname,:email,:password,:bio) #can we have this optional bio key?
+    params.require(:user).permit(:fname,:lname,:email,:password,:bio, :profile_photo_url, :cover_photo_url)
   end 
 
   def selected_user

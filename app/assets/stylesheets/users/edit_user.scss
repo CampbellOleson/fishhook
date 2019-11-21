@@ -1,0 +1,31 @@
+.edit-page-container {
+  font-family: Arial, Helvetica, sans-serif;
+  // background-color: #e0e0e0;
+  background-color: whitesmoke;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 70px;
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  min-height: 89vh;
+}
+
+.edit-header {
+  font-weight: 600;
+  font-size: 28px;
+  padding-top: 30px;
+  margin: 0 auto;
+  padding-left: 34%;
+  color: #383838;
+}
+
+.edit-inputs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-content-container {
+  width: 70%;
+  margin-left: 15%;
+}

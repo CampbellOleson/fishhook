@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/Root";
 import configureStore from "./store/store";
-import http from "http";
 
 document.addEventListener("DOMContentLoaded", () => {
   const preloadedState = window.currentUser
@@ -21,9 +20,3 @@ document.addEventListener("DOMContentLoaded", () => {
   window.store = store;
   window.currentUser = undefined;
 });
-
-// ping app every 5 minutes
-
-setInterval(function() {
-  http.get("http://fish-hook.herokuapp.com");
-}, 300000);
