@@ -7,7 +7,12 @@
 }
 
 .cover_photo_container {
-  background-image: image-url("lady.jpg");
+  background-image: image-url("fishhook.png");
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position-x: 680px;
+  background-position-y: 140px;
+  background-color: #c0c0c0;
   height: 250px;
   overflow: visible;
   width: 100%;
@@ -31,7 +36,7 @@
   box-shadow: 2px 2px 4px gray;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://www.helpscout.com/images/blog/steve-jobs.jpg");
+  background-image: image-url("generic-profile.jpeg");
   position: absolute;
   top: 100px;
   margin-left: 20px;
@@ -133,4 +138,18 @@
 #profile_footer {
   height: 20px;
   background-color: white;
+}
+
+.floating-upload-button {
+  position: absolute;
+}
+
+#cover-upload-button {
+  top: 25px;
+  left: 20px;
+}
+
+#profile-upload-button {
+  top: 150px;
+  left: 60px;
 }

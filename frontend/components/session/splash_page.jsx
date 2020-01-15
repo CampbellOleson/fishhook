@@ -12,13 +12,13 @@ const SplashPage = () => {
         <div className="splash_body">
           <div id="fishhook_blurb_container">
             <p id="fishhook_blurb">
-              Sign up to discover new spots and share your best catches!
+              Connect with the Fishing Community!
             </p>
           </div>
           <SignupFormContainer />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
