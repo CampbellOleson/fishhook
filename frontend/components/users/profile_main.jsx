@@ -17,14 +17,14 @@ class ProfileMain extends React.Component {
     return this.props.user ? (
       <div className="main_profile_column">
         <div className="cover_photo_container">
-          <button id="cover-upload-button" class="floating-upload-button">
+          {/* <button id="cover-upload-button" class="floating-upload-button">
             Add Cover Photo
-          </button>
+          </button> */}
           <div className="user_overlay">
             <div className="profile_photo_container" />
-            <button id="profile-upload-button" class="floating-upload-button">
+            {/* <button id="profile-upload-button" class="floating-upload-button">
               Add Profile Photo
-            </button>
+            </button> */}
             <p className="user_full_name">
               {this.props.user.fname.concat(" ").concat(this.props.user.lname)}
             </p>
